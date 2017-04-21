@@ -1,4 +1,3 @@
-
 function gp_printCV(cvRes)
     %get second place
     tmp = cvRes.sum;

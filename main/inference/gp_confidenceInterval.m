@@ -1,3 +1,6 @@
+
+
+
 function interval = gp_confidenceInterval(model,name,index,toSEM,toGP,siglevel,approx)
     if nargin<4
         toSEM = @jl_ID;

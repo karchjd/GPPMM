@@ -16,7 +16,6 @@ function plotGP(meanF,covarianceF,hyp,X,meanErrorF,covErrorF)
         hold on;
         if ~cmode
             y=gp_simulate(meanF,covarianceF,hyp,X);
-            %y = y-mean(y);
             plot(X,y,'LineWidth',2');     
             
         else

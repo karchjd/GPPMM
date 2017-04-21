@@ -1,4 +1,15 @@
-
+% GP_CV   Cross-validate a set of Gaussian Process model
+%   
+%   GP_CV(model,options) returns the cross-validation results
+%   
+%   Parameters:
+%       models: A cell array of Gaussian Process Panel models. The data
+%               sets connected with the models must be identical
+%       options: A structure with options. Currently, the only supported
+%               field is folds, which determines the number of folds.
+%   Out:
+%       A structure containing the results. 
+% 
 function out = gp_CV(models,options)
 NModel = numel(models);
 folds = options.folds;

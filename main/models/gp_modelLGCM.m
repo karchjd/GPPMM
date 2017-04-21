@@ -1,5 +1,5 @@
 %Latent Growth Curve Model
-function model = gp_modelLGCM(fast)
+function model = gp_modelLGCM()
     if nargin < 1
         fast = false;
     end

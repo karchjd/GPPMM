@@ -1,4 +1,14 @@
-function [p,ddf,LR] = gp_LR(modelFull,modelRes,ddf)
+% GP_LR performs likelihood ratio test
+%   
+%   [p,ddf,LR] = gp_LR(modelFull,modelRes) performs the likelihood ratio test
+%    between the models modelFull and modelRes
+%   
+%   Output:
+%       p: p-Value
+%       ddf: Degrees of freedom difference
+%       LR: likelihood ratio
+%   ones.
+function [p,ddf,LR] = gp_LR(modelFull,modelRes)
 if nargin<3
 %%check that the models are compatible for LR test
 fnames = fieldnames(modelFull)';

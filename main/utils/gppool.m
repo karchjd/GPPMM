@@ -19,7 +19,6 @@
 %    @infExact, meanfunc, covfunc, likfunc, x, y);
 %
 %
-%TODO: test case
 function [varargout] = gppool(hyp, inf, meanfunc, covfunc, likfunc, X, Y)
 
 
