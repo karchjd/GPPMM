@@ -1,42 +1,22 @@
 %Latent Growth Curve Model
-function model = gp_modelLGCM()
-    if nargin < 1
-        fast = false;
-    end
-    if fast
-        covSumV = @covSumFast;
-        mSum = @meanSumFast;
-    else
-        covSumV = @covSum;
-        mSum = @meanSum;
-    end
-        covCo = @covConst;
-        covLI = @covLIN;
-        covCor = @covCorr;
-        mConst = @meanConst;
-    %mean and cov function
-    meanf ={mSum,{mConst @meanLinear}};
-    covf = {covSumV, {covCo, {@covScale {covLI}} , covCor}};
-    if fast==2
-        meanf = @meanConstLinear;
-        covf = @covCoLiCor;
-    end
-    lik = @likGauss;
+function model = gp_modelLGCM(muI, muS,varI,varS,covIS,noise)
+    %structure
+    model.meanf = {@meanSum,{@meanConst,@meanLinear}};
+    model.covf = {@covSum,{@covConst,{@covScale {@covLIN}},@covCorr}};
+    model.lik = @likGauss;
     
-    %same starting values as the SEM I am using
-    muI = 1;
-    muS = 0;
+    if nargin<1
+        %some starting values that work
+        muI = 1;
+        muS = 0;
+        varI=1;
+        varS=1;
+        covIS=0.5;
+        noise = 1;
+    end
+    
     hyp.mean = [muI;muS];
-    
-    varI=1;
-    varS=1;
-    covIS=0.5;
-    noise = 1;
     hyp.cov = [gp_backward(varI);gp_backward(varS);covIS];
     hyp.lik = gp_backward(noise);
-    
-    model.meanf= meanf;
-    model.covf = covf;
-    model.lik = lik;
     model.hyp = hyp;
 end

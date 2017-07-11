@@ -61,5 +61,4 @@ function model = gpPanel(model,numit)
     
     model.mll = mllHist(end);
     model.mllHist=mllHist;
-    model.runTime = runTime;
 end
