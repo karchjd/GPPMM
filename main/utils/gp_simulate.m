@@ -12,12 +12,19 @@ function [y,latent]=gp_simulate(meanF,covarianceF,hyp,X,errorM,errorCov,seed)
         mtdix = 1:eval(feval(meanF{:}));
         ctdix = 1:eval(feval(covarianceF{:}));
     end
+    if ~iscell(meanF)
+        meanF = {meanF};
+    end
+    if ~iscell(covarianceF)
+        covarianceF = {covarianceF};
+    end
     %calculate mean and covariance for the Xs
     meanV = feval(meanF{:},hyp.mean(mtdix),X);
     covM = feval(covarianceF{:},hyp.cov(ctdix),X);
     if nargin==7
         rng(seed);
     end
+    display(rng);
     y=mvnrnd(meanV,covM);
     if mode
         latent=y;

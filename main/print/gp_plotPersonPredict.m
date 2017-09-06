@@ -1,4 +1,4 @@
-function gp_plotPersonPredict(res,latent)
+function [line,dots]=gp_plotPersonPredict(res,latent)
 if nargin<2
     latent = false;
 end
@@ -16,8 +16,11 @@ if s2>0
     fill([z; flipdim(z,1)], f, [7 7 7]/8);
 end
 hold on;
-plot(z, m, 'LineWidth', 2); 
-plot(res.Xtrain, res.Ytrain, 'o', 'MarkerSize', 7,'color','black');
+line = plot(z, m, 'LineWidth', 3); 
+dots = plot(res.Xtrain, res.Ytrain, 'o', 'MarkerSize', 7,'color','black','MarkerFaceColor',[.7 .7 .7]);
+if isfield(res,'Xtest')
+    plot(res.Xtest, res.Ytest, 'square', 'MarkerSize', 7,'color','black','MarkerFaceColor',[.7 .7 .7]);
+end
 xlim([min(z) max(z)]);
 xTicks = get(gca,'XTick');
 end

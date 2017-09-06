@@ -2,7 +2,7 @@
 function plotGP(meanF,covarianceF,hyp,X,meanErrorF,covErrorF)
     if nargin < 5
         cmode = false;
-        inum = 3;
+        inum = 1;
     else
         cmode = true;
         figure;
