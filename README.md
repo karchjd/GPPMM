@@ -17,8 +17,8 @@ GPML (http://www.gaussianprocess.org/gpml/code/matlab/doc/) needs to be installe
 
 ## Installation
 
-Download all files and make sure that the main folder is included in you Matlab path/ 
+Download all files and make sure that the main folder is included in you Matlab path.
 
 # Example
 
-The example in XXX demonstrates all major functions and how they are typically used.
+The example in examples/demoGPPM.m demonstrates all major functions and how they are typically used.
