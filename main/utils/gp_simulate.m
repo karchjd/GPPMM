@@ -24,7 +24,6 @@ function [y,latent]=gp_simulate(meanF,covarianceF,hyp,X,errorM,errorCov,seed)
     if nargin==7
         rng(seed);
     end
-    display(rng);
     y=mvnrnd(meanV,covM);
     if mode
         latent=y;

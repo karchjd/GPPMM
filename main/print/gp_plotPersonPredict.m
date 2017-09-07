@@ -2,7 +2,6 @@ function [line,dots]=gp_plotPersonPredict(res,latent)
 if nargin<2
     latent = false;
 end
-%stolen from demoRegression
 z = res.Xpred;
 if ~latent
 m = res.muPred;
