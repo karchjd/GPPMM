@@ -12,7 +12,11 @@ The recommended approach to learn about the functionality of the package is curr
 
 ## Prerequisites
 
-GPML (http://www.gaussianprocess.org/gpml/code/matlab/doc/) needs to be installed first. Instead of the current version, version 3.6 is required.
+GPML (http://www.gaussianprocess.org/gpml/code/matlab/doc/) needs to be installed first. Instead of the current version, version 3.6 is required. The direct links are:
+
+http://gaussianprocess.org/gpml/code/matlab/release/gpml-matlab-v3.6-2015-07-07.tar.gz
+http://gaussianprocess.org/gpml/code/matlab/release/gpml-matlab-v3.6-2015-07-07.zip
+
 
 
 ## Installation
