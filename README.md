@@ -30,7 +30,7 @@ Download all files (for example, by clicking [here](https://github.com/karchjd/G
 >> addpath(genpath('main/'))
 ```
 
-from the within the base folder.
+from within the base folder.
 
 # Example
 
