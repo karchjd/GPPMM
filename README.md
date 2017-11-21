@@ -24,13 +24,13 @@ For installation, follow the instructions [here](http://www.gaussianprocess.org/
 
 ## Installation
 
-Download all files (for example, by clicking [here](https://github.com/karchjd/GPPMM/archive/master.zip) and make sure that the [main](main/) folder including all its subfolders is included in you Matlab path. This can be achived running
+Download all files (for example, by clicking [here](https://github.com/karchjd/GPPMM/archive/master.zip)) and make sure that the [main](main/) folder including all its subfolders is included in you Matlab path. This can be achived running
 
 ```matlab
 >> addpath(genpath('main/'))
 ```
 
-from the within the base folder.
+from within the base folder.
 
 # Example
 
